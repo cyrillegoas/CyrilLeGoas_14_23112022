@@ -1,8 +1,12 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
 import { Logo } from './Logo';
+import { SearchBar } from './SearchBar';
 
 const StyledHeader = styled('header', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   py: '1rem',
   variants: {
     mediaQuery: {
@@ -16,6 +20,7 @@ export function Header() {
   return (
     <StyledHeader mediaQuery={{ '@initial': 'initial', '@sm': 'sm' }}>
       <Logo />
+      <SearchBar />
     </StyledHeader>
   );
 }
