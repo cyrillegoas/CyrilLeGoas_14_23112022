@@ -60,7 +60,7 @@ export function SearchBar() {
   return (
     <StyledForm>
       <StyledLabel htmlFor="search">search</StyledLabel>
-      <StyledButton type="button" tabindex="-1">
+      <StyledButton type="button" tabIndex="-1">
         <StyledSVG fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
