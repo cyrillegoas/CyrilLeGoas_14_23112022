@@ -5,7 +5,7 @@ import { styled } from '../../stitches.config';
 const StyledForm = styled('form', {
   display: 'flex',
   alignItems: 'center',
-  height: '$sizes$logo',
+  height: '$fontSizes$logo',
   px: '0.5rem',
   gap: '0.5rem',
   background: '$colors$backgroundLight',

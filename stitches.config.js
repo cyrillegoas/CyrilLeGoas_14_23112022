@@ -23,7 +23,9 @@ export const {
       logo: "'Audiowide', cursive",
       text: "'Work Sans', monospace",
     },
-    fontSizes: {},
+    fontSizes: {
+      logo: '2rem',
+    },
     fontWeights: {
       light: '400',
       medium: '500',
@@ -34,7 +36,6 @@ export const {
       sideMarginLarge: '2rem',
     },
     sizes: {
-      logo: '2rem',
       minWidth: '320px',
       maxWidth: '1440px',
     },

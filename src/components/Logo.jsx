@@ -4,7 +4,8 @@ import { styled } from '../../stitches.config';
 
 const StyledLink = styled(Link, {
   fontFamily: '$fonts$logo',
-  fontSize: '$sizes$logo',
+  fontSize: '$fontSizes$logo',
+  lineHeight: '1',
   textDecoration: 'none',
   width: 'fit-content',
   display: 'flex',
