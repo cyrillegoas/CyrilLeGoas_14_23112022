@@ -8,9 +8,11 @@ const StyledLink = styled(Link, {
   textDecoration: 'none',
   width: 'fit-content',
   display: 'flex',
+  alignItems: 'center',
   gap: '0.2em',
   '& img': {
     width: '1em',
+    height: '1em',
   },
   '&:link': {
     color: 'inherit',
