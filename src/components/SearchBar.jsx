@@ -30,7 +30,7 @@ const StyledButton = styled('button', {
   border: 'none',
   padding: '0px',
   my: '0px',
-  mx: '0.px',
+  mx: '0px',
   textDecoration: 'none',
   background: 'transparent',
   cursor: 'pointer',
@@ -39,6 +39,8 @@ const StyledButton = styled('button', {
 });
 
 const StyledSVG = styled('svg', {
+  width: '1.5rem',
+  height: '1.5rem',
   '& path': { stroke: '$colors$grey' },
 });
 
@@ -59,7 +61,7 @@ export function SearchBar() {
     <StyledForm>
       <StyledLabel htmlFor="search">search</StyledLabel>
       <StyledButton type="button" tabindex="-1">
-        <StyledSVG width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <StyledSVG fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
             strokeLinecap="round"
