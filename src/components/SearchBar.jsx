@@ -8,7 +8,7 @@ const StyledForm = styled('form', {
   height: '$fontSizes$logo',
   px: '0.5rem',
   gap: '0.5rem',
-  background: '$colors$backgroundLight',
+  background: '$colors$primaryLight',
   borderRadius: '$radii$default',
   '&:hover,&:focus-within': {
     '& svg path': { stroke: '$colors$text' },
@@ -17,7 +17,7 @@ const StyledForm = styled('form', {
   '&:focus': {},
   '&:active': {},
   '&:focus-within': {
-    outline: '2px solid $colors$accent',
+    outline: '2px solid $colors$secondary',
   },
 });
 
@@ -41,19 +41,19 @@ const StyledButton = styled('button', {
 const StyledSVG = styled('svg', {
   width: '1.5rem',
   height: '1.5rem',
-  '& path': { stroke: '$colors$grey' },
+  '& path': { stroke: '$colors$primaryLighter' },
 });
 
 const StyledInput = styled(motion.input, {
-  fontFamily: '$text',
-  fontWeight: '$medium',
-  color: '$colors$grey',
+  fontFamily: '$fonts$text',
+  fontWeight: '$fontWeights$medium',
+  color: '$colors$primaryLighter',
   height: '100%',
   width: '10ch',
   border: 'none',
   background: 'transparent',
   '&:focus-visible': { outline: 'none' },
-  '&::placeholder': { color: '$colors$grey', opacity: '1' },
+  '&::placeholder': { color: '$colors$primaryLighter', opacity: '1' },
 });
 
 export function SearchBar() {

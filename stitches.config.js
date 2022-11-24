@@ -12,12 +12,13 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      background: '#150E1B',
-      backgroundLight: '#342E3B',
+      primary: '#150E1B',
+      primaryLight: '#3A3442',
+      primaryLighter: '#655F6D',
+      primaryDark: '#000000',
+      secondary: '#FDCA40',
+      secondaryLight: '#FFFD73',
       text: '#FFFFFF',
-      accent: '#FDCA40',
-      accentLight: '#FEE08A',
-      grey: '#606060',
     },
     fonts: {
       logo: "'Audiowide', cursive",

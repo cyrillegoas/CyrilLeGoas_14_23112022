@@ -8,7 +8,7 @@ const StyledHeader = styled('header', {
   justifyContent: 'space-between',
   alignItems: 'center',
   py: '1rem',
-  borderBottom: '1px solid $colors$backgroundLight',
+  borderBottom: '1px solid $colors$primaryLight',
   variants: {
     mediaQuery: {
       initial: { px: '$space$sideMargin' },

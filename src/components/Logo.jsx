@@ -22,10 +22,10 @@ const StyledLink = styled(Link, {
     color: 'inherit',
   },
   '&:hover': {
-    color: '$accent',
+    color: '$colors$secondary',
   },
   '&:active': {
-    color: '$accentLight',
+    color: '$colors$secondaryLight',
   },
 });
 

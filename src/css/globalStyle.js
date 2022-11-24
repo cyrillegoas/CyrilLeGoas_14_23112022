@@ -12,7 +12,7 @@ export const globalStyle = globalCss({
   'p, h1, h2, h3, h4, h5, h6': { overflowWrap: 'break-word' },
   body: {
     color: '$colors$text',
-    backgroundColor: '$colors$background',
+    backgroundColor: '$colors$primary',
     lineHeight: '1.5',
     '-webkit-font-smoothing': 'antialiased',
   },
