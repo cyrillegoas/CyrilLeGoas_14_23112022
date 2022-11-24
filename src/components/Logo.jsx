@@ -27,6 +27,10 @@ const StyledLink = styled(Link, {
   '&:active': {
     color: '$colors$secondaryLight',
   },
+  '&:focus-visible': {
+    outline: 'none',
+    color: '$colors$secondary',
+  },
 });
 
 export function Logo() {
