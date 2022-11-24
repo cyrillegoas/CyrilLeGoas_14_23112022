@@ -12,14 +12,12 @@ export const globalStyle = globalCss({
   'p, h1, h2, h3, h4, h5, h6': { overflowWrap: 'break-word' },
   body: {
     color: '$colors$text',
-    backgroundColor: '$colors$primary',
+    backgroundColor: '$colors$grey',
     lineHeight: '1.5',
     '-webkit-font-smoothing': 'antialiased',
   },
   '#root': {
-    margin: 'auto',
     minHeight: '100vh',
     isolation: 'isolate',
-    maxWidth: '$sizes$maxWidth',
   },
 });

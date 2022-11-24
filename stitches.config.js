@@ -18,6 +18,8 @@ export const {
       primaryDark: '#000000',
       secondary: '#FDCA40',
       secondaryLight: '#FFFD73',
+      grey: '#E1E2E1',
+      greyLighter: '#F5F5F6',
       text: '#FFFFFF',
     },
     fonts: {

@@ -3,7 +3,13 @@ import { styled } from '../../stitches.config';
 import { Logo } from './Logo';
 import { SearchBar } from './SearchBar';
 
+const StyledWrapper = styled('div', {
+  background: '$colors$primary',
+});
+
 const StyledHeader = styled('header', {
+  maxWidth: '$sizes$maxWidth',
+  margin: 'auto',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -19,9 +25,11 @@ const StyledHeader = styled('header', {
 
 export function Header() {
   return (
-    <StyledHeader mediaQuery={{ '@initial': 'initial', '@sm': 'sm' }}>
-      <Logo />
-      <SearchBar />
-    </StyledHeader>
+    <StyledWrapper>
+      <StyledHeader mediaQuery={{ '@initial': 'initial', '@sm': 'sm' }}>
+        <Logo />
+        <SearchBar />
+      </StyledHeader>
+    </StyledWrapper>
   );
 }
