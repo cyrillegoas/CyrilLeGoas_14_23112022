@@ -13,6 +13,7 @@ export const globalStyle = globalCss({
   body: {
     color: '$colors$text',
     backgroundColor: '$colors$grey',
+    fontFamily: '$fonts$text',
     lineHeight: '1.5',
     '-webkit-font-smoothing': 'antialiased',
   },
