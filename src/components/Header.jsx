@@ -5,6 +5,7 @@ import { SearchBar } from './SearchBar';
 
 const StyledWrapper = styled('div', {
   background: '$colors$primary',
+  borderBottom: '5px solid $colors$primaryLighter',
 });
 
 const StyledHeader = styled('header', {
