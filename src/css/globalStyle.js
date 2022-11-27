@@ -18,6 +18,8 @@ export const globalStyle = globalCss({
     '-webkit-font-smoothing': 'antialiased',
   },
   '#root': {
+    display: 'flex',
+    flexDirection: 'column',
     minHeight: '100vh',
     isolation: 'isolate',
   },
