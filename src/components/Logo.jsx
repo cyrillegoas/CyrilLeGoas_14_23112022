@@ -6,6 +6,7 @@ const StyledLink = styled(Link, {
   fontFamily: '$fonts$logo',
   fontSize: '$fontSizes$logo',
   lineHeight: '1',
+  color: '$colors$textOnDark',
   textDecoration: 'none',
   display: 'flex',
   alignItems: 'center',
@@ -15,12 +16,6 @@ const StyledLink = styled(Link, {
   '& img': {
     width: '1em',
     height: '1em',
-  },
-  '&:link': {
-    color: 'inherit',
-  },
-  '&:visited': {
-    color: 'inherit',
   },
   '&:hover': {
     color: '$colors$secondary',

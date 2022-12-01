@@ -11,8 +11,8 @@ const StyledForm = styled('form', {
   background: '$colors$primaryLight',
   borderRadius: '$radii$default',
   '&:hover,&:focus-within': {
-    '& svg path': { stroke: '$colors$text' },
-    '& input,& input::placeholder': { color: '$colors$text' },
+    '& svg path': { stroke: '$colors$textOnDark' },
+    '& input,& input::placeholder': { color: '$colors$textOnDark' },
   },
   '&:focus': {},
   '&:active': {},

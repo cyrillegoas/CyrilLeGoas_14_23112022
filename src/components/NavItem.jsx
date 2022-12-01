@@ -19,12 +19,12 @@ const StyledSVG = styled('svg', {
   flex: '0 0 1.5em',
   fill: 'none',
   '& *': {
-    stroke: '$colors$text',
+    stroke: '$colors$textOnDark',
   },
 });
 
 const StyledSpan = styled('span', {
-  color: '$colors$text',
+  color: '$colors$textOnDark',
 });
 
 export function NavItem({ item }) {

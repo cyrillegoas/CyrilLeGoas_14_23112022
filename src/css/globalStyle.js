@@ -11,7 +11,7 @@ export const globalStyle = globalCss({
   'input, button, textarea, select': { font: 'inherit' },
   'p, h1, h2, h3, h4, h5, h6': { overflowWrap: 'break-word' },
   body: {
-    color: '$colors$text',
+    color: '$colors$textOnLight',
     backgroundColor: '$colors$greyLighter',
     fontFamily: '$fonts$text',
     lineHeight: '1.5',
