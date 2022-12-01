@@ -81,7 +81,7 @@ const navItems = [
       </>
     ),
     name: 'People',
-    path: '/employees',
+    path: '/people',
   },
   {
     icon: (
@@ -116,7 +116,7 @@ const navItems = [
       />
     ),
     name: 'Recruitment',
-    path: '/employees',
+    path: '/people',
   },
   {
     icon: (
@@ -174,7 +174,7 @@ const navItems = [
       </>
     ),
     name: 'Analytics',
-    path: '/employees',
+    path: '/people',
   },
   {
     icon: (
