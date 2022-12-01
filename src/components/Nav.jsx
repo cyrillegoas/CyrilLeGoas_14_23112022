@@ -27,7 +27,7 @@ export function Nav() {
     <StyledNav>
       <StyledList>
         {navItems.map((item) => (
-          <li>
+          <li key={item.name}>
             <NavItem item={item} key={item.name} />
           </li>
         ))}
