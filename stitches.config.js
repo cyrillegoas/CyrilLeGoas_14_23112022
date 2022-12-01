@@ -28,6 +28,7 @@ export const {
     },
     fontSizes: {
       logo: '2rem',
+      navItem: '0.875rem',
     },
     fontWeights: {
       light: '400',
@@ -35,8 +36,7 @@ export const {
       bold: '600',
     },
     space: {
-      sideMargin: '1rem',
-      sideMarginLarge: '2rem',
+      navSpacing: '1rem',
     },
     sizes: {
       minWidth: '320px',
@@ -44,6 +44,9 @@ export const {
     },
     radii: {
       default: '5px',
+    },
+    borderStyles: {
+      nav: '1px solid $colors$primaryLighter',
     },
   },
   media: {

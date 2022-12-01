@@ -7,10 +7,11 @@ const StyledLink = styled(Link, {
   fontSize: '$fontSizes$logo',
   lineHeight: '1',
   textDecoration: 'none',
-  width: 'fit-content',
   display: 'flex',
   alignItems: 'center',
   gap: '0.2em',
+  paddingBottom: '$space$navSpacing',
+  borderBottom: '$borderStyles$nav',
   '& img': {
     width: '1em',
     height: '1em',

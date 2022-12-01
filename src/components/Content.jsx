@@ -3,11 +3,7 @@ import { styled } from '../../stitches.config';
 
 const StyledWrapper = styled('div', {});
 
-const StyledMain = styled('main', {
-  background: '$colors$greyLighter',
-  height: '100%',
-  borderRadius: '$radii$default',
-});
+const StyledMain = styled('main', {});
 
 export function Content() {
   return (

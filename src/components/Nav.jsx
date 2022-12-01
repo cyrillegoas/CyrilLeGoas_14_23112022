@@ -3,19 +3,23 @@ import { NavItem } from './NavItem';
 import { styled } from '../../stitches.config';
 
 const StyledNav = styled('nav', {
-  display: 'grid',
-  placeContent: 'center',
-  padding: '2rem',
-  borderRight: '1px dashed $colors$primaryLighter',
+  flex: '1',
+  paddingTop: '$space$navSpacing',
 });
 
 const StyledList = styled('ul', {
   margin: '0',
   padding: '0',
   listStyle: 'none',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '1rem',
+  height: '100%',
+  display: 'grid',
+  gridTemplateRows: 'repeat(6, auto) 1fr',
+  '& li:last-child': {
+    alignSelf: 'end',
+    py: '$space$navSpacing',
+    borderTop: '$borderStyles$nav',
+    borderBottom: '$borderStyles$nav',
+  },
 });
 
 export function Nav() {
@@ -23,7 +27,9 @@ export function Nav() {
     <StyledNav>
       <StyledList>
         {navItems.map((item) => (
-          <NavItem item={item} key={item.name} />
+          <li>
+            <NavItem item={item} key={item.name} />
+          </li>
         ))}
       </StyledList>
     </StyledNav>
