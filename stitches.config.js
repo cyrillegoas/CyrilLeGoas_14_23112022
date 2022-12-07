@@ -18,18 +18,22 @@ export const {
       primaryDark: '#000000',
       secondary: '#FDCA40',
       secondaryLight: '#FFFD73',
-      grey: '#E1E2E1',
-      greyLighter: '#F5F5F6',
+      white: '#FFFFFF',
+      grey: '#E8EAEE',
+      greyLighter: '#FBFCFE',
       textOnDark: '#FFFFFF',
       textOnLight: '#150E1B',
+      tableHeader: '#655F6D',
     },
     fonts: {
       logo: "'Audiowide', cursive",
       text: "'Work Sans', monospace",
+      tableContent: "'Josefin Slab', serif",
     },
     fontSizes: {
       logo: '2rem',
       navItem: '0.875rem',
+      text: '0.875rem',
     },
     fontWeights: {
       light: '400',
@@ -48,6 +52,8 @@ export const {
     },
     borderStyles: {
       nav: '1px solid $colors$primaryLighter',
+      table: '1px solid $colors$grey',
+      tableHeader: '3px solid $colors$grey',
     },
   },
   media: {
