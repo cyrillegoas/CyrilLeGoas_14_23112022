@@ -4,7 +4,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from '@tanstack/react-table';
-import { peoples } from '../mockData';
+import { useEmployees } from '../hooks/stores';
 import { styled } from '../../stitches.config';
 import { Table } from './Table';
 import { TableHead } from './TableHead';
@@ -59,8 +59,9 @@ const columns = [
 ];
 
 export function PeopleTable() {
+  const employees = useEmployees();
   const table = useReactTable({
-    data: peoples,
+    data: employees,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
