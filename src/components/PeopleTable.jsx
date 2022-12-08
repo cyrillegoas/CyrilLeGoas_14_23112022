@@ -44,20 +44,16 @@ const columns = [
   columnHelper.accessor('dateFirstDayIn', {
     header: 'Start date',
   }),
-  columnHelper.accessor((row) => row.address.street, {
-    id: 'street',
+  columnHelper.accessor('street', {
     header: 'Street',
   }),
-  columnHelper.accessor((row) => row.address.city, {
-    id: 'city',
+  columnHelper.accessor('city', {
     header: 'City',
   }),
-  columnHelper.accessor((row) => row.address.state, {
-    id: 'state',
+  columnHelper.accessor('state', {
     header: 'State',
   }),
-  columnHelper.accessor((row) => row.address.zipcode, {
-    id: 'zipcode',
+  columnHelper.accessor('zipcode', {
     header: 'Zipcode',
   }),
 ];
