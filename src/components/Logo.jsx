@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { styled } from '../../stitches.config';
 
-const StyledLink = styled(Link, {
+const StyledLink = styled('a', {
   fontFamily: '$fonts$logo',
   fontSize: '$fontSizes$logo',
   lineHeight: '1',
@@ -31,7 +30,7 @@ const StyledLink = styled(Link, {
 
 export function Logo() {
   return (
-    <StyledLink to="/">
+    <StyledLink href="\">
       <img src="/logos/company_logo.svg" alt="" />
       HRnet
     </StyledLink>

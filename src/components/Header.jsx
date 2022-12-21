@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
 import { Logo } from './Logo';
-import { Nav } from './Nav';
 
 const StyledHeader = styled('header', {
   background: '$colors$primary',
@@ -15,7 +14,6 @@ export function Header() {
   return (
     <StyledHeader>
       <Logo />
-      <Nav />
     </StyledHeader>
   );
 }
