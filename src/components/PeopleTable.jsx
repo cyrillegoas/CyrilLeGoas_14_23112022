@@ -41,7 +41,7 @@ const columns = [
   columnHelper.accessor('birthday', {
     header: 'Birthday',
   }),
-  columnHelper.accessor('dateFirstDayIn', {
+  columnHelper.accessor('firstDayIn', {
     header: 'Start date',
   }),
   columnHelper.accessor('street', {
