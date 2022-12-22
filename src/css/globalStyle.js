@@ -19,6 +19,7 @@ export const globalStyle = globalCss({
   },
   '#root': {
     display: 'flex',
+    flexDirection: 'column',
     minHeight: '100vh',
     isolation: 'isolate',
   },

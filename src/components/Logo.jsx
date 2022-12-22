@@ -9,12 +9,11 @@ const StyledLink = styled('a', {
   textDecoration: 'none',
   display: 'flex',
   alignItems: 'center',
-  gap: '0.2em',
-  paddingBottom: '$space$navSpacing',
-  borderBottom: '$borderStyles$nav',
+  gap: '0.5em',
+  width: 'fit-content',
   '& img': {
-    width: '1em',
-    height: '1em',
+    width: '1.5em',
+    height: '1.5em',
   },
   '&:hover': {
     color: '$colors$secondary',
