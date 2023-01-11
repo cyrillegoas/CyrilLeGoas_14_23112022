@@ -14,8 +14,6 @@ import { TableCell } from './TableCell';
 
 const StyledSection = styled('section', {
   background: '$colors$white',
-  py: '1rem',
-  margin: '2rem',
   border: '$borderStyles$table',
   borderRadius: '$radii$default',
 });
