@@ -48,8 +48,8 @@ export const {
       default: '5px',
     },
     borderStyles: {
-      table: '1px solid $colors$greyLight',
-      tableRow: '1px solid $colors$greyLight',
+      table: '2px solid $colors$greyLight',
+      tableRow: '2px solid $colors$greyLight',
     },
   },
   media: {
