@@ -3,7 +3,6 @@ import { Modal } from './Modal';
 import { styled } from '../../stitches.config';
 
 const StyledSection = styled('section', {
-  marginTop: '3rem',
   marginBottom: '1rem',
   display: 'flex',
   justifyContent: 'space-between',

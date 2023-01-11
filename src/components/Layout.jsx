@@ -7,6 +7,7 @@ const StyledMain = styled('main', {
   width: '100%',
   margin: 'auto',
   px: '4rem',
+  py: '3rem',
   flex: '1',
 });
 
