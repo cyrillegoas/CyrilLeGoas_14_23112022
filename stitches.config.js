@@ -52,6 +52,7 @@ export const {
     borderStyles: {
       nav: '1px solid $colors$primaryLighter',
       table: '1px solid $colors$greyLight',
+      tableRow: '1px solid $colors$greyLight',
     },
   },
   media: {
