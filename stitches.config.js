@@ -39,9 +39,7 @@ export const {
       medium: '500',
       bold: '600',
     },
-    space: {
-      navSpacing: '1rem',
-    },
+    space: {},
     sizes: {
       minWidth: '320px',
       maxWidth: '1440px',
@@ -50,7 +48,6 @@ export const {
       default: '5px',
     },
     borderStyles: {
-      nav: '1px solid $colors$primaryLighter',
       table: '1px solid $colors$greyLight',
       tableRow: '1px solid $colors$greyLight',
     },
