@@ -28,12 +28,11 @@ export const {
     fonts: {
       logo: "'Audiowide', cursive",
       text: "'Work Sans', monospace",
-      tableContent: "'Josefin Slab', serif",
     },
     fontSizes: {
       logo: '2rem',
-      navItem: '0.875rem',
-      text: '0.875rem',
+      textTableHeader: '0.875rem',
+      text: '1rem',
     },
     fontWeights: {
       light: '400',
