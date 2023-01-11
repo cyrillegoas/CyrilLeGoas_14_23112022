@@ -19,11 +19,11 @@ export const {
       secondary: '#FDCA40',
       secondaryLight: '#FFFD73',
       white: '#FFFFFF',
-      grey: '#E8EAEE',
-      greyLighter: '#FBFCFE',
+      grey: '#8E8E8E',
+      greyLight: '#EBEBEB',
+      greyLighter: '#FDFDFD',
       textOnDark: '#FFFFFF',
       textOnLight: '#150E1B',
-      tableHeader: '#655F6D',
     },
     fonts: {
       logo: "'Audiowide', cursive",
@@ -52,8 +52,7 @@ export const {
     },
     borderStyles: {
       nav: '1px solid $colors$primaryLighter',
-      table: '1px solid $colors$grey',
-      tableHeader: '3px solid $colors$grey',
+      table: '1px solid $colors$greyLight',
     },
   },
   media: {
