@@ -12,6 +12,9 @@ import { TableRow } from './TableRow';
 import { TableHeaderCell } from './TableHeaderCell';
 import { Tablebody } from './TableBody';
 import { TableCell } from './TableCell';
+import { Tag } from './Tag';
+
+import { peoples } from '../mockData';
 
 const StyledSection = styled('section', {
   background: '$colors$white',
@@ -58,7 +61,7 @@ const columns = [
 export function PeopleTable() {
   const employees = useEmployees();
   const table = useReactTable({
-    data: employees,
+    data: peoples,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
@@ -80,7 +83,13 @@ export function PeopleTable() {
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>{cell.getValue()}</TableCell>
+                <TableCell key={cell.id}>
+                  {cell.column.id === 'departement' ? (
+                    <Tag>{cell.getValue()}</Tag>
+                  ) : (
+                    cell.getValue()
+                  )}
+                </TableCell>
               ))}
             </TableRow>
           ))}

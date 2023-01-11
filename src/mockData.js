@@ -1,3 +1,5 @@
+import { departments } from './utils/utils';
+
 export const peoples = [
   {
     id: 1,
@@ -8,8 +10,9 @@ export const peoples = [
     city: 'Gwenborough',
     state: 'Florida',
     zipcode: '92998-3874',
-    departement: 'management',
-    dateFirstDayIn: '03/03/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '03/03/2022',
   },
   {
     id: 2,
@@ -20,8 +23,9 @@ export const peoples = [
     city: 'Wisokyburgh',
     state: 'Utah',
     zipcode: '90566-7771',
-    departement: 'sales',
-    dateFirstDayIn: '04/04/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '04/04/2022',
   },
   {
     id: 3,
@@ -32,8 +36,9 @@ export const peoples = [
     city: 'McKenziehaven',
     state: 'Indiana',
     zipcode: '59590-4157',
-    departement: 'production',
-    dateFirstDayIn: '05/05/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '05/05/2022',
   },
   {
     id: 4,
@@ -44,8 +49,9 @@ export const peoples = [
     city: 'South Elvis',
     state: 'Michigan',
     zipcode: '53919-4257',
-    departement: 'engineering',
-    dateFirstDayIn: '06/06/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '06/06/2022',
   },
   {
     id: 5,
@@ -56,8 +62,9 @@ export const peoples = [
     city: 'Roscoeview',
     state: 'Arizona',
     zipcode: '33263',
-    departement: 'sales',
-    dateFirstDayIn: '07/07/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '07/07/2022',
   },
   {
     id: 6,
@@ -68,8 +75,9 @@ export const peoples = [
     city: 'South Christy',
     state: 'Colorado',
     zipcode: '23505-1337',
-    departement: 'engineering',
-    dateFirstDayIn: '08/08/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '08/08/2022',
   },
   {
     id: 7,
@@ -80,8 +88,9 @@ export const peoples = [
     city: 'Howemouth',
     state: 'Montana',
     zipcode: '58804-1099',
-    departement: 'HR',
-    dateFirstDayIn: '09/09/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '09/09/2022',
   },
   {
     id: 8,
@@ -92,8 +101,9 @@ export const peoples = [
     city: 'Aliyaview',
     state: 'Texas',
     zipcode: '45169',
-    departement: 'production',
-    dateFirstDayIn: '10/10/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '10/10/2022',
   },
   {
     id: 9,
@@ -104,8 +114,9 @@ export const peoples = [
     city: 'Bartholomebury',
     state: 'California',
     zipcode: '76495-3109',
-    departement: 'QC',
-    dateFirstDayIn: '11/11/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '11/11/2022',
   },
   {
     id: 10,
@@ -116,7 +127,8 @@ export const peoples = [
     city: 'Lebsackbury',
     state: 'Louisiana',
     zipcode: '31428-2261',
-    departement: 'production',
-    dateFirstDayIn: '12/12/2022',
+    departement:
+      departments.names[Math.floor(Math.random() * departments.names.length)],
+    firstDayIn: '12/12/2022',
   },
 ];
