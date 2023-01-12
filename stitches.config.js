@@ -17,7 +17,8 @@ export const {
       primaryLighter: '#655F6D',
       primaryDark: '#000000',
       secondary: '#FDCA40',
-      secondaryLight: '#FFFD73',
+      secondaryLight: '#FDD566',
+      secondaryLighter: '#FEDF8C',
       white: '#FFFFFF',
       grey: '#8E8E8E',
       greyLight: '#EBEBEB',
@@ -50,6 +51,10 @@ export const {
     borderStyles: {
       table: '2px solid $colors$greyLight',
       tableRow: '2px solid $colors$greyLight',
+    },
+    tooltip: {
+      x: '0px',
+      y: '0px',
     },
   },
   media: {
