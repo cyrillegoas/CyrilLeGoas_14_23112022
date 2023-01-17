@@ -19,10 +19,6 @@ ReactModal.defaultStyles = {
     padding: '2rem',
     background: '#281B33',
     borderRadius: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    overflow: 'auto',
-    WebkitOverflowScrolling: 'touch',
   },
 };
 

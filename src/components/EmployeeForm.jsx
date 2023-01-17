@@ -6,14 +6,13 @@ import { Button } from './Button';
 
 const StyledForm = styled('form', {
   color: '$colors$textOnDark',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2rem',
 });
 
 const StyledWrapper = styled('div', {
-  display: 'flex',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2,30ch)',
   gap: '2rem',
+  marginBottom: '2rem',
 });
 
 const StyledButtonWrapper = styled('div', {
@@ -46,7 +45,6 @@ const StyledInput = styled('input', {
   padding: '0',
   paddingLeft: '0.5rem',
   lineHeight: '2',
-  width: '30ch',
 });
 
 export function EmployeeForm({ closeModal }) {
