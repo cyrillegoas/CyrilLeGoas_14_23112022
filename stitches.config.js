@@ -19,6 +19,9 @@ export const {
       secondary: '#FDCA40',
       secondaryLight: '#FDD566',
       secondaryLighter: '#FEDF8C',
+      warning: '#FD4040',
+      warningLight: '#FF6666',
+      warningLighter: '#FF9E9E',
       white: '#FFFFFF',
       grey: '#8E8E8E',
       greyLight: '#EBEBEB',
@@ -49,6 +52,7 @@ export const {
       default: '5px',
     },
     borderStyles: {
+      modal: '2px solid black',
       table: '2px solid $colors$greyLight',
       tableRow: '2px solid $colors$greyLight',
     },

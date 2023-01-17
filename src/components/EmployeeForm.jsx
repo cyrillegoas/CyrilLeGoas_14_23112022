@@ -2,10 +2,51 @@ import React from 'react';
 import { styled } from '../../stitches.config';
 import { useEmployeesActions } from '../hooks/stores';
 import { useForm } from '../hooks/useForm';
+import { Button } from './Button';
 
 const StyledForm = styled('form', {
+  color: '$colors$textOnDark',
   display: 'flex',
   flexDirection: 'column',
+  gap: '2rem',
+});
+
+const StyledWrapper = styled('div', {
+  display: 'flex',
+  gap: '2rem',
+});
+
+const StyledButtonWrapper = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '2rem',
+});
+
+const StyledPanel = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  '& input': {
+    marginBottom: '1rem',
+  },
+  '& input:last-of-type': {
+    marginBottom: '0',
+  },
+});
+
+const StyledLabel = styled('label', {
+  marginBottom: '0.2rem',
+  fontWeight: '$fontWeights$bold',
+});
+
+const StyledInput = styled('input', {
+  background: '#3A3442',
+  color: '$colors$textOnDark',
+  border: 'none',
+  borderBottom: '2px solid #FDCA40',
+  padding: '0',
+  paddingLeft: '0.5rem',
+  lineHeight: '2',
+  width: '30ch',
 });
 
 export function EmployeeForm({ closeModal }) {
@@ -29,79 +70,92 @@ export function EmployeeForm({ closeModal }) {
 
   return (
     <StyledForm onSubmit={handleFormSubmit}>
-      <label htmlFor="firstname">Firstname</label>
-      <input
-        type="text"
-        id="firstname"
-        name="firstname"
-        onChange={handleChange}
-        value={values.firstname}
-      />
-      <label htmlFor="lastname">Lastname</label>
-      <input
-        type="text"
-        id="lastname"
-        name="lastname"
-        onChange={handleChange}
-        value={values.lastname}
-      />
-      <label htmlFor="departement">Departement</label>
-      <input
-        type="text"
-        id="departement"
-        name="departement"
-        onChange={handleChange}
-        value={values.departement}
-      />
-      <label htmlFor="birthday">Birthday</label>
-      <input
-        type="text"
-        id="birthday"
-        name="birthday"
-        onChange={handleChange}
-        value={values.birthday}
-      />
-      <label htmlFor="firstDayIn">FirstDayIn</label>
-      <input
-        type="text"
-        id="firstDayIn"
-        name="firstDayIn"
-        onChange={handleChange}
-        value={values.firstDayIn}
-      />
-      <label htmlFor="street">Street</label>
-      <input
-        type="text"
-        id="street"
-        name="street"
-        onChange={handleChange}
-        value={values.street}
-      />
-      <label htmlFor="city">City</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        onChange={handleChange}
-        value={values.city}
-      />
-      <label htmlFor="state">State</label>
-      <input
-        type="text"
-        id="state"
-        name="state"
-        onChange={handleChange}
-        value={values.state}
-      />
-      <label htmlFor="zipcode">Zipcode</label>
-      <input
-        type="text"
-        id="zipcode"
-        name="zipcode"
-        onChange={handleChange}
-        value={values.zipcode}
-      />
-      <button type="submit">confirm</button>
+      <StyledWrapper>
+        <StyledPanel>
+          <StyledLabel htmlFor="firstname">Firstname</StyledLabel>
+          <StyledInput
+            type="text"
+            id="firstname"
+            name="firstname"
+            onChange={handleChange}
+            value={values.firstname}
+          />
+          <StyledLabel htmlFor="lastname">Lastname</StyledLabel>
+          <StyledInput
+            type="text"
+            id="lastname"
+            name="lastname"
+            onChange={handleChange}
+            value={values.lastname}
+          />
+          <StyledLabel htmlFor="departement">Departement</StyledLabel>
+          <StyledInput
+            type="text"
+            id="departement"
+            name="departement"
+            onChange={handleChange}
+            value={values.departement}
+          />
+          <StyledLabel htmlFor="birthday">Birthday</StyledLabel>
+          <StyledInput
+            type="text"
+            id="birthday"
+            name="birthday"
+            onChange={handleChange}
+            value={values.birthday}
+          />
+          <StyledLabel htmlFor="firstDayIn">FirstDayIn</StyledLabel>
+          <StyledInput
+            type="text"
+            id="firstDayIn"
+            name="firstDayIn"
+            onChange={handleChange}
+            value={values.firstDayIn}
+          />
+        </StyledPanel>
+        <StyledPanel>
+          <StyledLabel htmlFor="street">Street</StyledLabel>
+          <StyledInput
+            type="text"
+            id="street"
+            name="street"
+            onChange={handleChange}
+            value={values.street}
+          />
+          <StyledLabel htmlFor="city">City</StyledLabel>
+          <StyledInput
+            type="text"
+            id="city"
+            name="city"
+            onChange={handleChange}
+            value={values.city}
+          />
+          <StyledLabel htmlFor="state">State</StyledLabel>
+          <StyledInput
+            type="text"
+            id="state"
+            name="state"
+            onChange={handleChange}
+            value={values.state}
+          />
+          <StyledLabel htmlFor="zipcode">Zipcode</StyledLabel>
+          <StyledInput
+            type="text"
+            id="zipcode"
+            name="zipcode"
+            onChange={handleChange}
+            value={values.zipcode}
+          />
+        </StyledPanel>
+      </StyledWrapper>
+      <StyledButtonWrapper>
+        <Button onClick={() => handleFormSubmit()} type="submit">
+          Confirm
+        </Button>
+        <Button onClick={() => closeModal()} variant="cancel">
+          Cancel
+        </Button>
+      </StyledButtonWrapper>
     </StyledForm>
   );
 }
