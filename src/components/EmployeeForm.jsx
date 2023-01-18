@@ -96,7 +96,7 @@ export function EmployeeForm({ closeModal }) {
           />
           <StyledLabel htmlFor="birthday">Birthday</StyledLabel>
           <StyledInput
-            type="text"
+            type="date"
             id="birthday"
             name="birthday"
             onChange={handleChange}
@@ -104,7 +104,7 @@ export function EmployeeForm({ closeModal }) {
           />
           <StyledLabel htmlFor="firstDayIn">FirstDayIn</StyledLabel>
           <StyledInput
-            type="text"
+            type="date"
             id="firstDayIn"
             name="firstDayIn"
             onChange={handleChange}
