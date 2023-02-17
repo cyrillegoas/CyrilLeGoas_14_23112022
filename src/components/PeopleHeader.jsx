@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Modal } from './Modal';
+import React from 'react';
+import useDialog from 'oc-react-dialog';
 import { styled } from '../../stitches.config';
 import { Button } from './Button';
+import { EmployeeForm } from './EmployeeForm';
 
 const StyledSection = styled('section', {
   marginBottom: '1rem',
@@ -15,17 +16,15 @@ const StyledH1 = styled('h1', {
 });
 
 export function PeopleHeader() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [Dialog, openDialog, closeDialog] = useDialog();
 
   return (
     <StyledSection>
       <StyledH1>Employee roster</StyledH1>
-      <Button onClick={() => setIsModalOpen(true)}>+ Add new employee</Button>
-      <Modal
-        contentLabel="Add employee"
-        isOpen={isModalOpen}
-        closeFn={() => setIsModalOpen(false)}
-      />
+      <Button onClick={() => openDialog()}>+ Add new employee</Button>
+      <Dialog>
+        <EmployeeForm closeModal={closeDialog} />
+      </Dialog>
     </StyledSection>
   );
 }

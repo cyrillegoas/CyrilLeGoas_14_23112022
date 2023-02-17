@@ -6,6 +6,9 @@ import { Button } from './Button';
 
 const StyledForm = styled('form', {
   color: '$colors$textOnDark',
+  padding: '2rem',
+  background: '#281B33',
+  borderRadius: '20px',
 });
 
 const StyledWrapper = styled('div', {
