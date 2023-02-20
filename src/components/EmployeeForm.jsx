@@ -64,7 +64,8 @@ export function EmployeeForm({ closeModal }) {
     zipcode: '',
   });
 
-  const handleFormSubmit = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
     employeesStoreActions.add(values);
     closeModal();
   };
