@@ -2,7 +2,6 @@ import React from 'react';
 import { useEmployees } from '../hooks/stores';
 import { styled } from '../../stitches.config';
 import { departments } from '../utils/utils';
-import { peoples } from '../mockData';
 import { BarChart } from './BarChart';
 
 const StyledSection = styled('section', {
@@ -41,8 +40,7 @@ const StyledTotal = styled('span', {
 });
 
 export function RosterStats() {
-  // const employees = useEmployees();
-  const employees = peoples;
+  const employees = useEmployees();
 
   const nbOfEmployees = employees.length;
 
