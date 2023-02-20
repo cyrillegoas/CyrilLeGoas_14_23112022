@@ -14,8 +14,6 @@ import { Tablebody } from './TableBody';
 import { TableCell } from './TableCell';
 import { Tag } from './Tag';
 
-import { peoples } from '../mockData';
-
 const StyledSection = styled('section', {
   background: '$colors$white',
   border: '$borderStyles$table',
@@ -61,7 +59,7 @@ const columns = [
 export function PeopleTable() {
   const employees = useEmployees();
   const table = useReactTable({
-    data: peoples,
+    data: employees,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });

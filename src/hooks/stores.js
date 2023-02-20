@@ -1,7 +1,8 @@
 import create from 'zustand';
+import { peoples } from '../mockData';
 
 const useStore = create((set) => ({
-  employees: [],
+  employees: peoples,
   actions: {
     add: (employee) =>
       set((state) => ({ employees: [...state.employees, employee] })),
