@@ -151,9 +151,7 @@ export function EmployeeForm({ closeModal }) {
         </StyledPanel>
       </StyledWrapper>
       <StyledButtonWrapper>
-        <Button onClick={() => handleFormSubmit()} type="submit">
-          Confirm
-        </Button>
+        <Button type="submit">Confirm</Button>
         <Button onClick={() => closeModal()} variant="cancel">
           Cancel
         </Button>
