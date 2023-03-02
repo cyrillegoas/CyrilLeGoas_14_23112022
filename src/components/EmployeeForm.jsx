@@ -5,6 +5,7 @@ import { useEmployeesActions } from '../hooks/stores';
 import { useForm } from '../hooks/useForm';
 import { Button } from './Button';
 import { departments } from '../utils/utils';
+import { DateSelector } from './DateSelector';
 
 const StyledForm = styled('form', {
   color: '$colors$textOnDark',
@@ -17,7 +18,6 @@ const StyledWrapper = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(2,30ch)',
   gap: '2rem',
-  marginBottom: '2rem',
 });
 
 const StyledButtonWrapper = styled('div', {
@@ -31,9 +31,6 @@ const StyledPanel = styled('div', {
   flexDirection: 'column',
   '& input': {
     marginBottom: '1rem',
-  },
-  '& input:last-of-type': {
-    marginBottom: '0',
   },
 });
 
@@ -141,6 +138,8 @@ export function EmployeeForm({ closeModal }) {
     setFormValues(e.target.id, e.target.value);
   };
 
+  const handleSetDate = (name) => (date) => setFormValues(name, date);
+
   return (
     <StyledForm onSubmit={handleFormSubmit}>
       <StyledWrapper>
@@ -172,19 +171,15 @@ export function EmployeeForm({ closeModal }) {
             onChange={(e) => setFormValues('departement', e.value)}
           />
           <StyledLabel htmlFor="birthday">Birthday</StyledLabel>
-          <StyledInput
-            type="date"
+          <DateSelector
             id="birthday"
-            name="birthday"
-            onChange={handleInputChange}
+            onInputChange={handleSetDate('birthday')}
             value={formValues.birthday}
           />
           <StyledLabel htmlFor="firstDayIn">FirstDayIn</StyledLabel>
-          <StyledInput
-            type="date"
+          <DateSelector
             id="firstDayIn"
-            name="firstDayIn"
-            onChange={handleInputChange}
+            onInputChange={handleSetDate('firstDayIn')}
             value={formValues.firstDayIn}
           />
         </StyledPanel>

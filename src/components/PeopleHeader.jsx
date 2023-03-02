@@ -9,10 +9,22 @@ const StyledSection = styled('section', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  '& .customDialog': {
+    width: '100vw',
+    height: '100vh',
+  },
 });
 
 const StyledH1 = styled('h1', {
   fontSize: '2rem',
+});
+
+const StyledWrapper = styled('div', {
+  width: '100%',
+  height: '100%',
+  display: 'grid',
+  placeContent: 'center',
 });
 
 export function PeopleHeader() {
@@ -22,8 +34,10 @@ export function PeopleHeader() {
     <StyledSection>
       <StyledH1>Employee roster</StyledH1>
       <Button onClick={() => openDialog()}>+ Add new employee</Button>
-      <Dialog>
-        <EmployeeForm closeModal={closeDialog} />
+      <Dialog className="customDialog">
+        <StyledWrapper>
+          <EmployeeForm closeModal={closeDialog} />
+        </StyledWrapper>
       </Dialog>
     </StyledSection>
   );
