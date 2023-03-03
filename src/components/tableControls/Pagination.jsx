@@ -5,9 +5,9 @@ const StyledWrapper = styled('div', {
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  gap: '2rem',
-  px: '1rem',
-  paddingBottom: '0.5rem',
+  gap: '2em',
+  px: '1em',
+  paddingBottom: '0.5em',
 });
 const StyledSelectorWrapper = styled('div', {
   display: 'flex',
