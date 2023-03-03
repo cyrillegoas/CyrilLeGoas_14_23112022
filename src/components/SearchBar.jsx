@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { styled } from '../../stitches.config';
+import { useForm } from '../hooks/useForm';
 
 const StyledForm = styled('form', {
   display: 'flex',
@@ -8,16 +9,16 @@ const StyledForm = styled('form', {
   height: '$fontSizes$logo',
   px: '0.5rem',
   gap: '0.5rem',
-  background: '$colors$primaryLight',
+  background: '$colors$secondary',
   borderRadius: '$radii$default',
   '&:hover,&:focus-within': {
-    '& svg path': { stroke: '$colors$textOnDark' },
-    '& input,& input::placeholder': { color: '$colors$textOnDark' },
+    '& svg path': { stroke: '$colors$primary' },
+    '& input,& input::placeholder': { color: '$colors$primary' },
   },
   '&:focus': {},
   '&:active': {},
   '&:focus-within': {
-    outline: '2px solid $colors$secondary',
+    outline: '2px solid $colors$primary',
   },
 });
 
@@ -41,13 +42,13 @@ const StyledButton = styled('button', {
 const StyledSVG = styled('svg', {
   width: '1.5rem',
   height: '1.5rem',
-  '& path': { stroke: '$colors$primaryLighter' },
+  '& path': { stroke: '$colors$primary' },
 });
 
 const StyledInput = styled(motion.input, {
   fontFamily: '$fonts$text',
   fontWeight: '$fontWeights$medium',
-  color: '$colors$primaryLighter',
+  color: '$colors$primary',
   height: '100%',
   width: '10ch',
   border: 'none',
@@ -56,9 +57,15 @@ const StyledInput = styled(motion.input, {
   '&::placeholder': { color: '$colors$primaryLighter', opacity: '1' },
 });
 
-export function SearchBar() {
+export function SearchBar({ submitFn }) {
+  const [formValues, setFormValues] = useForm({ search: '' });
   return (
-    <StyledForm>
+    <StyledForm
+      onSubmit={(e) => {
+        e.preventDefault();
+        submitFn(formValues.search);
+      }}
+    >
       <StyledLabel htmlFor="search">search</StyledLabel>
       <StyledButton type="button" tabIndex="-1">
         <StyledSVG fill="none" viewBox="0 0 24 24">
@@ -75,11 +82,15 @@ export function SearchBar() {
         type="text"
         name="search"
         id="search"
-        placeholder="search"
+        placeholder="Search"
         whileFocus={{
           width: '20ch',
         }}
         transition={{ ease: 'backIn' }}
+        onChange={(e) => {
+          setFormValues(e.target.id, e.target.value);
+        }}
+        value={formValues.search}
       />
     </StyledForm>
   );

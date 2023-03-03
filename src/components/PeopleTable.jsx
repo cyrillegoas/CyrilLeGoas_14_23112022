@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   createColumnHelper,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
@@ -60,10 +61,15 @@ const columns = [
 
 export function PeopleTable() {
   const employees = useEmployees();
+  const [globalFilter, setGlobalFilter] = useState('');
   const table = useReactTable({
     data: employees,
     columns,
+    state: {
+      globalFilter,
+    },
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
 
@@ -78,6 +84,9 @@ export function PeopleTable() {
       pageRowCount: table.getRowModel().rows.length,
       pageSize: table.getState().pagination.pageSize,
       setPageSize: table.setPageSize,
+    },
+    filter: {
+      setFilterFn: setGlobalFilter,
     },
   };
 
