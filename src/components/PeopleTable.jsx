@@ -2,6 +2,7 @@ import React from 'react';
 import {
   createColumnHelper,
   getCoreRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 import { useEmployees } from '../hooks/stores';
@@ -13,6 +14,7 @@ import { TableHeaderCell } from './TableHeaderCell';
 import { Tablebody } from './TableBody';
 import { TableCell } from './TableCell';
 import { Tag } from './Tag';
+import { Controls } from './tableControls/Controls';
 
 const StyledSection = styled('section', {
   background: '$colors$white',
@@ -62,37 +64,54 @@ export function PeopleTable() {
     data: employees,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
+
+  const tableControls = {
+    pagination: {
+      nextPage: table.nextPage,
+      isNextPageAvailable: table.getCanNextPage(),
+      previousPage: table.previousPage,
+      isPreviousPageAvailable: table.getCanPreviousPage(),
+      pageIndex: table.getState().pagination.pageIndex,
+      rowsCount: employees.length,
+      pageRowCount: table.getRowModel().rows.length,
+      pageSize: table.getState().pagination.pageSize,
+      setPageSize: table.setPageSize,
+    },
+  };
 
   return (
     <StyledSection>
       <StyledTitle>table</StyledTitle>
-      <Table>
-        <TableHead>
-          <TableRow>
-            {table.getAllColumns().map((column) => (
-              <TableHeaderCell key={column.id}>
-                {column.columnDef.header}
-              </TableHeaderCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <Tablebody>
-          {table.getRowModel().rows.map((row) => (
-            <TableRow key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>
-                  {cell.column.id === 'departement' ? (
-                    <Tag>{cell.getValue()}</Tag>
-                  ) : (
-                    cell.getValue()
-                  )}
-                </TableCell>
+      <Controls tableControls={tableControls}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              {table.getAllColumns().map((column) => (
+                <TableHeaderCell key={column.id}>
+                  {column.columnDef.header}
+                </TableHeaderCell>
               ))}
             </TableRow>
-          ))}
-        </Tablebody>
-      </Table>
+          </TableHead>
+          <Tablebody>
+            {table.getRowModel().rows.map((row) => (
+              <TableRow key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id}>
+                    {cell.column.id === 'departement' ? (
+                      <Tag>{cell.getValue()}</Tag>
+                    ) : (
+                      cell.getValue()
+                    )}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </Tablebody>
+        </Table>
+      </Controls>
     </StyledSection>
   );
 }
