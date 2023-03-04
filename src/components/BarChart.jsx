@@ -14,7 +14,7 @@ export function BarChart({ nbOfEmployees, data }) {
         item.nbOfEmployeesInDep ? (
           <Bar
             key={item.name}
-            color={departments.colors[item.name]}
+            color={departments.colors[item.name].background}
             width={`${(item.nbOfEmployeesInDep * 100) / nbOfEmployees}%`}
             tooltip={`${item.nbOfEmployeesInDep} ${item.name}`}
           />

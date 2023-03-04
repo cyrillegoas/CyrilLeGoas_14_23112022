@@ -3,7 +3,7 @@ import { styled } from '../../stitches.config';
 
 const StyledTHead = styled('thead', {
   fontSize: '$fontSizes$textTableHeader',
-  color: '$colors$grey',
+  color: '$colors$textOnLight',
   textAlign: 'left',
 });
 
