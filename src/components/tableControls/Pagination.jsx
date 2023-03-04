@@ -65,6 +65,7 @@ export function Pagination({ controls }) {
           type="button"
           onClick={previousPage}
           disabled={!isPreviousPageAvailable}
+          aria-label="previous page"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +87,7 @@ export function Pagination({ controls }) {
           type="button"
           onClick={nextPage}
           disabled={!isNextPageAvailable}
+          aria-label="next page"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

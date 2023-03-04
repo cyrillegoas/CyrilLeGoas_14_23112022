@@ -67,7 +67,7 @@ export function SearchBar({ submitFn }) {
       }}
     >
       <StyledLabel htmlFor="search">search</StyledLabel>
-      <StyledButton type="button" tabIndex="-1">
+      <StyledButton type="button" tabIndex="-1" aria-label="search">
         <StyledSVG fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
