@@ -4,6 +4,7 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
+  getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 import { useEmployees } from '../hooks/stores';
@@ -71,6 +72,7 @@ export function PeopleTable() {
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
   });
 
   const tableControls = {
@@ -98,7 +100,11 @@ export function PeopleTable() {
           <TableHead>
             <TableRow>
               {table.getAllColumns().map((column) => (
-                <TableHeaderCell key={column.id}>
+                <TableHeaderCell
+                  key={column.id}
+                  sortToggleFn={column.getToggleSortingHandler()}
+                  isSorted={column.getIsSorted()}
+                >
                   {column.columnDef.header}
                 </TableHeaderCell>
               ))}
